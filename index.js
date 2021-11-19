@@ -7,7 +7,7 @@ const cont = '0x1A652dEa38B3522106D1675dbe5fc222e831fE8c'
 const app = express();
 
 
-app.get("/response", (req, res, next) => {
+app.get("/", (req, res, next) => {
     web3.eth.getStorageAt(cont, 151)
         .then(r => res.send(process(r)));
     
